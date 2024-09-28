@@ -1,3 +1,8 @@
+import subprocess
+from functools import partial
+
+subprocess.Popen = partial(subprocess.Popen, encoding="utf-8")
+# 修改编码方式,window默认编码是gbk,Mac和Linux 默认是uft-8
 import execjs
 
 
