@@ -1,4 +1,5 @@
 import subprocess
+import time
 from functools import partial
 
 subprocess.Popen = partial(subprocess.Popen, encoding="utf-8")
@@ -16,3 +17,7 @@ def run_js_function(js_file_path, function_name, args=None):
         return ctx.call(function_name, *args)
     else:
         return ctx.call(function_name, args)
+
+
+def get_miliseconds_timestamp() -> str:
+    return f"{int(time.time() * 1000)}"
