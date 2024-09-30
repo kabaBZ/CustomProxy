@@ -10,7 +10,7 @@ function get_enviroment(proxy_array) {
                 return target[property];\
             }, \
             set: function(target, property, value, receiver) { \
-                console.log("方法:", "set  ", "对象:", "${proxy_array[i]}" ,"  属性:", property, "  属性类型:", typeof property, "  属性值类型:", typeof target[property]); \
+                console.log("方法:", "set  ", "对象:", "${proxy_array[i]}" ,"  属性:", property, "  属性类型:", typeof property, "  属性值类型:", typeof value); \
                 return Reflect.set(...arguments); \
             } \
         }`
