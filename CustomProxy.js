@@ -31,11 +31,31 @@ delete __filename;
 delete __dirname;
 window.setInterval = _nullfunc;
 window.setTimeout = _nullfunc;
+var Window = function Window(){}
+window.__proto__ = Window.prototype
+
 navigator = {}
+var Navigator = function Navigator(){};
+navigator.__proto__ = Navigator.prototype
+
 screen = {}
+var Screen = function Screen(){}
+screen.__proto__ = Screen.prototype
+
 localStorage = {}
+var LocalStorage = function LocalStorage(){};
+localStorage.__proto__ = LocalStorage.prototype
+
 location = {}
+var Location = function Location(){}
+location.__proto__ = Location.prototype
+
 history = {}
+var History = function History(){}
+history.__proto__ = History.prototype
+
 document = {};
+var Document = function Document(){};
+document.__proto__ = Document.prototype
 
 get_enviroment(proxy_array)
