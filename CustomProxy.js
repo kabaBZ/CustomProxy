@@ -29,6 +29,7 @@ delete global;
 delete Buffer;
 delete __filename;
 delete __dirname;
+delete navigator;
 window.setInterval = _nullfunc;
 window.setTimeout = _nullfunc;
 var Window = function Window(){}
