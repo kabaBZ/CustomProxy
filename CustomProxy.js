@@ -59,4 +59,7 @@ document = {};
 var Document = function Document(){};
 document.__proto__ = Document.prototype
 
+// 简单的去格式化检测
+RegExp.prototype.test = function () { return true }
+
 get_enviroment(proxy_array)
