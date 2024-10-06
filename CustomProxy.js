@@ -62,4 +62,22 @@ document.__proto__ = Document.prototype
 // 简单的去格式化检测
 RegExp.prototype.test = function () { return true }
 
+// tostring 相关
+// Function.prototype.toString = function() {
+//     return "function" == typeof this && this.__raven__ ? e._originalFunctionToString.apply(this.__orig__, arguments) : e._originalFunctionToString.apply(this, arguments)
+// }
+// window.constructor = 'function Window() { [native code] }';
+// 检测调用toString
+// (function () {
+//     const tugo = Function.prototype.toString;
+//     Object.defineProperty(Function.prototype, 'toString', {
+//         get() {
+//             const aa = tugo.apply(this);
+//             console.log('检测到调用toString 方法');
+//             debugger;
+//             return aa;
+//         }
+//     });
+// })();
+
 get_enviroment(proxy_array)
